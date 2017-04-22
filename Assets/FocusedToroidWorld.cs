@@ -14,9 +14,7 @@ public class FocusedToroidWorld : MonoBehaviour {
 		for (int x = 0; x < worldWidth; x++) {
 			for (int y = 0; y < worldHeight; y++) {
 				Vector3 tilePosition = new Vector3 (x * tileSize, y * tileSize, 0);
-				Debug.Log (tilePosition);
 				GameObject newTile = GameObject.Instantiate (tile, tilePosition, Quaternion.identity, transform);
-				Debug.Log (newTile.transform.position);
 			}
 		}
 	}
