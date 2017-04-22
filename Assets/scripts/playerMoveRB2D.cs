@@ -5,35 +5,35 @@ using UnityEngine;
 public class playerMoveRB2D : MonoBehaviour
 {
 
-    Vector3 pos;                                // For movement
+    Vector3 movement;                                // For movement
     public float speed = 96.0f;                         // Speed of movement
     Rigidbody2D rb2d;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        pos = rb2d.position;
     }
 
     void FixedUpdate()
     {
+		movement = new Vector3 ();
         if (Input.GetKey(KeyCode.A))
         {        // Left
-            pos += Vector3.left;
+			movement += Vector3.left;
         }
         if (Input.GetKey(KeyCode.D))
         {        // Right
-            pos += Vector3.right;
+			movement += Vector3.right;
         }
         if (Input.GetKey(KeyCode.W))
         {        // Up
-            pos += Vector3.up;
+			movement += Vector3.up;
         }
         if (Input.GetKey(KeyCode.S))
         {        // Down
-            pos += Vector3.down;
+			movement += Vector3.down;
         }
-
-        rb2d.MovePosition(Vector3.MoveTowards(rb2d.position, pos, Time.deltaTime * speed));    // Move there
+		rb2d.velocity = movement * speed;
+		//rb2d.MovePosition(Vector3.MoveTowards(rb2d.position, pos * speed, Time.deltaTime));    // Move there
     }
 }
