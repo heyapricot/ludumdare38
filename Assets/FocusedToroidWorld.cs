@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FocusedToroidWorld : MonoBehaviour {
-	public int tileSize = 16;
+	public int tileSize = 1;
 	public int worldWidth = 16;
 	public int worldHeight = 16;
 	public GameObject focus;
-	public GameObject[] worldTiles;
+	public GameObject tile;
+	private GameObject[] tiles;
 	// Use this for initialization
 	void Start () {
 		for (int x = 0; x < worldWidth; x++) {
 			for (int y = 0; y < worldHeight; y++) {
-				GameObject tile = worldTiles [x + y * worldWidth];
-				if (tile != null)
-					tile.transform.position.Set (x * tileSize, y * tileSize, 0);
+				Vector3 tilePosition = new Vector3 (x * tileSize, y * tileSize, 0);
+				Debug.Log (tilePosition);
+				GameObject newTile = GameObject.Instantiate (tile, tilePosition, Quaternion.identity, transform);
+				Debug.Log (newTile.transform.position);
 			}
 		}
 	}
