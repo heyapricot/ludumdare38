@@ -452,7 +452,8 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 0
   cloudProjectId: a95b3b8f-5bef-4019-a8b1-67646677db89
   projectName: ludumDare38
   organizationId: heyalvaro
