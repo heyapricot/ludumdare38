@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 95563591468747908}
   - component: {fileID: 114587026771808812}
   m_Layer: 0
-  m_Name: Drake
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7a9812814043349bd9840a521d82a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myColor: 0
   fireRange: 4
   speed: 3
   prefab: {fileID: 1283438972168480, guid: 203f9a9bb7efa294994ef2152fbb2a0e, type: 2}
