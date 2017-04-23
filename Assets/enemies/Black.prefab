@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61542875896817434}
   - component: {fileID: 95280179117683438}
   - component: {fileID: 114775529555270680}
+  - component: {fileID: 114397062174652142}
   m_Layer: 0
   m_Name: Black
   m_TagString: Enemy
@@ -151,6 +152,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194a4e45d30c5b743a5b90789abc6916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114397062174652142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270322256007878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060a079e9b80f8943a3453d6910b261a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114775529555270680
 MonoBehaviour:
   m_ObjectHideFlags: 1
