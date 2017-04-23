@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AssemblyCSharp;
 
 public class FocusedToroidWorld : MonoBehaviour {
 	public int tileSize = 1;
@@ -8,6 +9,7 @@ public class FocusedToroidWorld : MonoBehaviour {
 	public int worldHeight = 16;
 	public GameObject focus;
 	public GameObject tile;
+	public Sprite[] sprites;
 	private GameObject[] tiles;
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,7 @@ public class FocusedToroidWorld : MonoBehaviour {
 			for (int y = 0; y < worldHeight; y++) {
 				Vector3 tilePosition = new Vector3 (x * tileSize, y * tileSize, 0);
 				GameObject newTile = GameObject.Instantiate (tile, tilePosition, Quaternion.identity, transform);
+				newTile.GetComponent<SpriteRenderer> ().sprite = RandomUtils.Choice (sprites);
 			}
 		}
 	}
