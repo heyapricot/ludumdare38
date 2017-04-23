@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 890fa2223f5f2144f9a7201d1c061c23
-timeCreated: 1492896186
+timeCreated: 1492916981
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,7 @@ TextureImporter:
     21300018: Slime_4
     21300020: Slime_5
     21300022: Slime_Puddle
+    21300024: RedTrophy
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -238,6 +239,19 @@ TextureImporter:
         serializedVersion: 2
         x: 112
         y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RedTrophy
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
