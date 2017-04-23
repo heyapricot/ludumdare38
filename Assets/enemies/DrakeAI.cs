@@ -77,4 +77,15 @@ public class DrakeAI : MonoBehaviour {
 		fireball.GetComponent<Rigidbody2D> ().velocity = targetVector.normalized * 16;
 		shooting = false;
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Weapon")
+        {
+            Debug.Log("Drake was touched by a weapon");
+            GetComponent<healthController>().health -= 10;
+            Debug.Log("Drake's health: " + GetComponent<healthController>().health);
+        }
+    }
+
 }

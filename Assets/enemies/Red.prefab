@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61414915734558054}
   - component: {fileID: 95563591468747908}
   - component: {fileID: 114587026771808812}
+  - component: {fileID: 114901773756927312}
   m_Layer: 0
   m_Name: Red
   m_TagString: Enemy
@@ -167,6 +168,18 @@ MonoBehaviour:
   speed: 3
   prefab: {fileID: 1283438972168480, guid: 203f9a9bb7efa294994ef2152fbb2a0e, type: 2}
   target: {fileID: 0}
+--- !u!114 &114901773756927312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294560999369438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060a079e9b80f8943a3453d6910b261a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!212 &212304253225226938
 SpriteRenderer:
   m_ObjectHideFlags: 1
