@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class playerSwingWeapon : MonoBehaviour {
     GameObject weapon;
-    Vector3 playerPosition;
     bool weaponOut = false;
 	// Use this for initialization
 	void Start () {
@@ -14,8 +13,6 @@ public class playerSwingWeapon : MonoBehaviour {
         //Hide weapon
         weapon.SetActive(false);
 
-        //Get player
-        playerPosition = transform.position;
 	}
 	
 	// Update is called once per frame
