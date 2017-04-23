@@ -20,7 +20,7 @@ public class playerSwingWeapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        trigger_swing();
 	}
 
     private void trigger_swing()
@@ -31,7 +31,6 @@ public class playerSwingWeapon : MonoBehaviour {
 
     private void drawWeapon()
     {
-        weapon.transform.position = new Vector3(-0.5f, 0) + playerPosition;
         if (!weaponOut)
         {
             weapon.SetActive(true);
