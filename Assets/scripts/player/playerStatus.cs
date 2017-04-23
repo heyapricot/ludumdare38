@@ -45,7 +45,19 @@ public class playerStatus : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player was touched");
+        switch (collision.gameObject.tag)
+        {
+            case "Asset":
+                Debug.Log("Player was touched by an asset");
+                break;
+            case "Missile":
+                Debug.Log("Player was touched by a missile");
+                break;
+            case "Enemy":
+                Debug.Log("Player was touched by an enemy");
+                break;
+        }
+        
 
     }
 
