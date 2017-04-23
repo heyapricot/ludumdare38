@@ -4394,7 +4394,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
@@ -4450,6 +4450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6a2eb773de34b4a9720a91d56394ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healt: 100
 --- !u!1 &1567672030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,6 +4936,11 @@ Prefab:
     - target: {fileID: 4251180267035946, guid: 873f15c58ec7d754b8e2a8578c666743, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.13596833
+      objectReference: {fileID: 0}
+    - target: {fileID: 61102319230456764, guid: 873f15c58ec7d754b8e2a8578c666743,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 873f15c58ec7d754b8e2a8578c666743, type: 2}

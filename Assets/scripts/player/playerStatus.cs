@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerStatus : MonoBehaviour {
 
     public enum directions { down = 0, right, up, left };
+    public float healt;
     int face_direction = 0;
 
     // Use this for initialization
@@ -41,4 +42,11 @@ public class playerStatus : MonoBehaviour {
 
         return face_direction;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Player was touched");
+
+    }
+
 }
