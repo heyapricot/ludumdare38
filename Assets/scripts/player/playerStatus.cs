@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerStatus : MonoBehaviour {
 
     public enum directions { down = 0, right, up, left };
-    public float healt;
+    public float health;
     int face_direction = 0;
 
     // Use this for initialization
@@ -15,7 +15,8 @@ public class playerStatus : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Debug.Log("Player health: " + health);
+        isDead();
 	}
 
     public int getFaceDirection()
@@ -52,13 +53,27 @@ public class playerStatus : MonoBehaviour {
                 break;
             case "Missile":
                 Debug.Log("Player was touched by a missile");
+                health -= 10;
                 break;
             case "Enemy":
                 Debug.Log("Player was touched by an enemy");
+                health -= 10;
                 break;
         }
-        
+    }
 
+    private bool isDead()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+            
     }
 
 }
