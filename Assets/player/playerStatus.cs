@@ -53,7 +53,7 @@ public class playerStatus : MonoBehaviour {
                 break;
             case "Missile":
                 Debug.Log("Player was touched by a missile");
-                health -= 10;
+                //health -= 10;
                 break;
             case "Enemy":
                 Debug.Log("Player was touched by an enemy");
