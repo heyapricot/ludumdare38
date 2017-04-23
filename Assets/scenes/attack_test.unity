@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 1546692521}
   - component: {fileID: 1546692522}
   - component: {fileID: 1546692523}
+  - component: {fileID: 1546692524}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -303,6 +304,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6a2eb773de34b4a9720a91d56394ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1546692524
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546692514}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18da0c620afa6d64991f914c6fe9389c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1574390767
 Prefab:
   m_ObjectHideFlags: 0
