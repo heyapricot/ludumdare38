@@ -24,6 +24,8 @@ public class FocusedToroidWorld : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (focus == null || !focus.activeInHierarchy)
+			return;
 		if (focus.transform.position.x > worldWidth * tileSize) {
 			focus.transform.position -= new Vector3(worldWidth * tileSize, 0, 0);
 		} else if (focus.transform.position.x < 0) {

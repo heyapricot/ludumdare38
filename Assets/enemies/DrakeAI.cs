@@ -15,6 +15,7 @@ public class DrakeAI : MonoBehaviour {
 	public GameObject prefab;
 	public GameObject target;
 	bool shooting = false;
+	bool facingLeft = false;
 	Rigidbody2D rb2d;
 	Animator animator;
 	// Use this for initialization
@@ -40,8 +41,10 @@ public class DrakeAI : MonoBehaviour {
 			animator.Play (GetColor() + "Walk");
 			if (rb2d.velocity.x < 0) {
 				GetComponent<SpriteRenderer> ().flipX = true;
+				facingLeft = true;
 			} else if (rb2d.velocity.x > 0) {
 				GetComponent<SpriteRenderer> ().flipX = false;
+				facingLeft = false;
 			}
 		} else {
 			rb2d.velocity = Vector2.zero;
@@ -70,10 +73,11 @@ public class DrakeAI : MonoBehaviour {
 	}
 
 	public void Fire() {
-		Vector3 targetVector = target.transform.position - transform.position;
+		Vector3 startVector = transform.position + new Vector3(1, 0, 0) * (facingLeft ? -1 : 1);
+		Vector3 targetVector = target.transform.position - startVector;
 		float angle = Mathf.Atan2 (targetVector.y, targetVector.x) * Mathf.Rad2Deg;
 		Debug.Log (angle);
-		GameObject fireball = Instantiate (prefab, transform.position, Quaternion.AngleAxis (angle, Vector3.forward));
+		GameObject fireball = Instantiate (prefab, startVector, Quaternion.AngleAxis (angle, Vector3.forward));
 		fireball.GetComponent<Rigidbody2D> ().velocity = targetVector.normalized * 16;
 		shooting = false;
 	}
