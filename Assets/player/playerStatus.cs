@@ -8,10 +8,11 @@ public class playerStatus : MonoBehaviour {
     public int strength = 5;
     public int speed = 4;
 	public directions face_direction = directions.down;
+    GameObject levelManager;
 
     // Use this for initialization
     void Start () {
-		
+        levelManager = GameObject.Find("LevelManager");
 	}
 	
 	// Update is called once per frame
@@ -42,4 +43,8 @@ public class playerStatus : MonoBehaviour {
         }
     }
 
+    private void OnDisable()
+    {
+        levelManager.GetComponent<LevelManager>().GameOver();
+    }
 }
