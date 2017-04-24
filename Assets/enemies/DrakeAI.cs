@@ -80,10 +80,17 @@ public class DrakeAI : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Weapon")
+        int damageDealt = 0;
+        int playerStrength = 0;
+        int weaponPower = 0;
+
+        if (collision.gameObject.tag == "Weapon")
         {
+            playerStrength = collision.gameObject.transform.parent.GetComponent<playerStatus>().strength;
+            weaponPower = collision.gameObject.GetComponent<weaponStatus>().power;
+            damageDealt = playerStrength + weaponPower;
             Debug.Log("Drake was touched by a weapon");
-            GetComponent<healthController>().health -= 10;
+            GetComponent<healthController>().health -= damageDealt;
             Debug.Log("Drake's health: " + GetComponent<healthController>().health);
         }
     }
