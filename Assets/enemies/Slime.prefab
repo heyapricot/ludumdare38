@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4854696447144972}
   - component: {fileID: 61276748551519226}
   - component: {fileID: 114479851969889120}
+  - component: {fileID: 50771886453974880}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -96,6 +97,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!50 &50771886453974880
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396273015338296}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58461817266441614
 CircleCollider2D:
   m_ObjectHideFlags: 1
