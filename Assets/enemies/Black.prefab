@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 95280179117683438}
   - component: {fileID: 114775529555270680}
   - component: {fileID: 114397062174652142}
+  - component: {fileID: 114155799973848058}
   m_Layer: 0
   m_Name: Black
   m_TagString: Enemy
@@ -141,6 +142,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114155799973848058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270322256007878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f1ed002638cba48a0fa6ffae6271ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 1996605278853290, guid: cbfa8f1e771df054faa24154c67d2f1e, type: 2}
 --- !u!114 &114272156505823038
 MonoBehaviour:
   m_ObjectHideFlags: 1

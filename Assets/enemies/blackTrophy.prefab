@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114159884704148912}
   - component: {fileID: 61412032394584234}
   m_Layer: 0
-  m_Name: RedTrophy
+  m_Name: blackTrophy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fda14b52ae9ada449c0c12db5da1dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
+  color: 3
 --- !u!114 &114679443821627714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2063409335
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300024, guid: 890fa2223f5f2144f9a7201d1c061c23, type: 3}
+  m_Sprite: {fileID: 21300038, guid: 890fa2223f5f2144f9a7201d1c061c23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
