@@ -15,7 +15,7 @@ public class healthController : MonoBehaviour {
         isDead();
 	}
 
-    private bool isDead()
+    public bool isDead()
     {
         if (health <= 0)
         {
