@@ -12,7 +12,7 @@ public class playerMoveRB2D : MonoBehaviour
 	const string idle = "Idle";
 	const string attack = "Attack";
     Vector3 movement;                                // For movement
-    public float speed = 96.0f;                         // Speed of movement
+    int speed = 1;                         // Speed of movement
     Rigidbody2D rb2d;
 	Animator animator;
 	string lastMove = down;
@@ -20,6 +20,7 @@ public class playerMoveRB2D : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator> ();
+        speed = GetComponent<playerStatus>().speed;
     }
 
     void FixedUpdate()

@@ -6,6 +6,7 @@ public class playerStatus : MonoBehaviour {
 
     public enum directions { down = 0, right, up, left };
     public int strength = 5;
+    public int speed = 4;
     int face_direction = 0;
 
     // Use this for initialization
