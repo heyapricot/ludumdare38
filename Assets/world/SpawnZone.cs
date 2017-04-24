@@ -30,7 +30,7 @@ public class SpawnZone : MonoBehaviour {
 
 	void SpawnRandom() {
 		Vector2 position = RandomUtils.InBox (area.offset, area.size);
-		GameObject spawn = Instantiate (RandomUtils.Choice (spawns), position, Quaternion.identity);
+		GameObject spawn = Instantiate (RandomUtils.Choice (spawns), position, Quaternion.identity, transform.parent);
 		spawned.Add (spawn);
 	}
 
