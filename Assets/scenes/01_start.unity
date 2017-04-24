@@ -1248,7 +1248,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2, y: 2}
 --- !u!1 &420608286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,8 +4394,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513454628}
-  m_Text: "Oh my! There's drakes in those caves again! \nWhere do they keep coming
-    from!?"
+  m_Text: 
   m_OffsetZ: -5
   m_CharacterSize: 1
   m_LineSpacing: 1
