@@ -6,22 +6,19 @@ public class playerWeaponController : MonoBehaviour {
 
     private playerStatus getPlayerStatus;
 
-    GameObject weapon;
-    bool weaponOut = false;
+	public GameObject drawnWeapon;
 	// Use this for initialization
 	void Start () {
-        //Weapon is the first child of player
-        weapon = this.gameObject.transform.GetChild(0).gameObject;
-        //Hide weapon
-        weapon.SetActive(false);
         //Get player status
         getPlayerStatus = this.GetComponent<playerStatus>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        followPlayer();
         trigger_swing();
+		if (GetComponentInChildren<weaponStatus> () != null) {
+			followPlayer (GetComponentInChildren<weaponStatus> ().gameObject);
+		}
     }
 
     private void trigger_swing()
@@ -32,37 +29,32 @@ public class playerWeaponController : MonoBehaviour {
 
     private void drawWeapon()
     {
-        if (!weaponOut)
+		if (GetComponentInChildren<weaponStatus>() == null)
         {
-            weapon.SetActive(true);
-            weaponOut = true;
+			GameObject weapon = Instantiate (drawnWeapon, transform);
+			Destroy (weapon, 0.25f);
+			followPlayer (weapon);
         }
-        else
-        {
-            weapon.SetActive(false);
-            weaponOut = false;
-        }
-
     }
 
-    void followPlayer()
+	void followPlayer(GameObject weapon)
     {
         
         switch (getPlayerStatus.getFaceDirection())
         {
-            case (int)playerStatus.directions.up:
+            case playerStatus.directions.up:
                 weapon.transform.position = transform.position + new Vector3(0, 1.0f , 0);
                 weapon.transform.localRotation = Quaternion.identity;
                 break;
-            case (int)playerStatus.directions.down:
+            case playerStatus.directions.down:
                 weapon.transform.position = transform.position + new Vector3(0, -1.0f, 0);
                 weapon.transform.localRotation = Quaternion.AngleAxis(180, Vector3.forward);
                 break;
-            case (int)playerStatus.directions.left:
+            case playerStatus.directions.left:
                 weapon.transform.position = transform.position + new Vector3(-0.6f, 0, 0);
                 weapon.transform.localRotation = Quaternion.AngleAxis(90, Vector3.forward);
                 break;
-            case (int)playerStatus.directions.right:
+            case playerStatus.directions.right:
                 weapon.transform.position = transform.position + new Vector3(0.6f, 0, 0);
                 weapon.transform.localRotation = Quaternion.AngleAxis(270, Vector3.forward);
                 break;

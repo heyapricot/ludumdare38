@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
-	public GameObject camera;
+	public GameObject myCamera;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,8 +11,8 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 difference = transform.position - camera.transform.position;
+		Vector3 difference = transform.position - myCamera.transform.position;
 		difference.z = 0;
-		camera.transform.position += difference;
+		myCamera.transform.position += difference;
 	}
 }
