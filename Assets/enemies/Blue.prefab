@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 95342779439120408}
   - component: {fileID: 114552039229061684}
   - component: {fileID: 114348818565158394}
+  - component: {fileID: 114761703823776696}
   m_Layer: 0
   m_Name: Blue
   m_TagString: Enemy
@@ -180,6 +181,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194a4e45d30c5b743a5b90789abc6916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114761703823776696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902674386168916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f1ed002638cba48a0fa6ffae6271ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 1996605278853290, guid: afc54c3829980464d89d8e954dc855f2, type: 2}
 --- !u!212 &212042115773896998
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -51,7 +51,7 @@ public class playerStatus : MonoBehaviour {
                 break;
             case "Missile":
                 Debug.Log("Player was touched by a missile");
-                GetComponent<healthController>().health -= 10;
+                GetComponent<healthController>().health -= 1;
                 break;
             case "Enemy":
                 Debug.Log("Player was touched by an enemy");
