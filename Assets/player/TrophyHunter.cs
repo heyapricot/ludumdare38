@@ -30,4 +30,12 @@ public class TrophyHunter : MonoBehaviour {
 			Destroy (other.gameObject);
 		}
 	}
+	public bool HasTrophy(DrakeAI.DrakeColor color) {
+		foreach (GameObject slotObj in trophySlots) {
+			TrophySlot slot = slotObj.GetComponent<TrophySlot> ();
+			if (slot.color == color && slot.IsFilled ())
+				return true;
+		}
+		return false;
+	}
 }

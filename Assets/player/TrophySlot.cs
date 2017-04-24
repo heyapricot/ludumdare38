@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrophySlot : MonoBehaviour {
 	public DrakeAI.DrakeColor color;
+	bool isFilled;
 	GameObject filled;
 	float targetScale = 1f;
 	float blinkScale = 1.35f;
@@ -32,5 +33,9 @@ public class TrophySlot : MonoBehaviour {
 	public void Obtain() {
 		filled.SetActive (true);
 		blinkProgress = 0;
+		isFilled = true;
+	}
+	public bool IsFilled() {
+		return isFilled;
 	}
 }
