@@ -8,9 +8,9 @@ public class OldMan : MonoBehaviour {
 	TextMesh textMesh;
 	const string StartHook = "Oh my! There's drakes nesting to the north again!\nGo clear them out, go!";
 	const string AnnoyedHook = "What are you still doing here!? Go!";
-	const string RedHook = "Gee! That's a big one, but I thought I saw a green one earlier.\nMy eyesight might just be going, but can you check for other nests?";
+	const string RedHook = "Gee! That's a big one.\nI thought I saw a green one earlier.\nCan you check for other nests?";
 	const string GreenHook = "Goodness! I told you, green!\nThere aren't any more, are there?";
-	const string BlackHook = "Dear me! I would not have seen that if it were right on top of me!\nWhere do they keep coming from!?";
+	const string BlackHook = "Dear me! I would not have seen that if it were \nright on top of me!";
 	const string BlueHook = "My stars! As blue as the sky and twice as deadly!\nErr, wait, no.";
 	const string BlueRehook = "Nevermind that sky stuff, just go get the rest of them!";
 	const string DoneHook = "Thank you, my boy. I think you got them all.";
@@ -61,6 +61,7 @@ public class OldMan : MonoBehaviour {
 		if (expression == null) {
 			if (retrieved.Count == 4) {
 				expression = DoneHook;
+				animation = "Celebrating";
 			} else {
 				expression = AnnoyedHook;
 			}
