@@ -23,25 +23,43 @@ public class playerStatus : MonoBehaviour {
     public directions getFaceDirection()
     {
         return face_direction;
-    }
+	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        switch (collision.gameObject.tag)
-        {
-            case "Asset":
-                Debug.Log("Player was touched by an asset");
-                break;
-            case "Missile":
-                Debug.Log("Player was touched by a missile");
-                GetComponent<healthController>().health -= 1;
-                break;
-            case "Enemy":
-                Debug.Log("Player was touched by an enemy");
-                GetComponent<healthController>().health -= 10;
-                break;
-        }
-    }
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		switch (collision.gameObject.tag)
+		{
+		case "Asset":
+			Debug.Log("Player was touched by an asset");
+			break;
+		case "Missile":
+			Debug.Log("Player was touched by a missile");
+			GetComponent<healthController>().health -= 1;
+			break;
+		case "Enemy":
+			Debug.Log("Player was touched by an enemy");
+			GetComponent<healthController>().health -= 10;
+			break;
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		switch (collision.gameObject.tag)
+		{
+		case "Asset":
+			Debug.Log("Player was touched by an asset");
+			break;
+		case "Missile":
+			Debug.Log("Player was touched by a missile");
+			GetComponent<healthController>().health -= 1;
+			break;
+		case "Enemy":
+			Debug.Log("Player was touched by an enemy");
+			GetComponent<healthController>().health -= 10;
+			break;
+		}
+	}
 
     private void OnDisable()
     {

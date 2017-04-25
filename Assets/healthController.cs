@@ -11,7 +11,7 @@ public class healthController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(this.gameObject.name + "'s health: " + health);
+        //Debug.Log(this.gameObject.name + "'s health: " + health);
         isDead();
 	}
 
